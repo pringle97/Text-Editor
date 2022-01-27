@@ -29,15 +29,13 @@ module.exports = () => {
 
       new WebpackPwaManifest({
         inject: false,
-
         fingerprints: false,
-
         name: "Text Editor App",
         short_name: "Text Editor App",
         theme_color: "#ffffff",
         background_color: "#ffffff",
         start_url: "/",
-        display: "standalone",
+        publicPath: '/',      
 
         icons: [
           {
@@ -46,7 +44,7 @@ module.exports = () => {
             ),
             // the plugin will generate an image for each size
             // included in the size array
-            size: [72, 96, 128, 144, 152, 192, 384, 512],
+            size: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           }
         ]
